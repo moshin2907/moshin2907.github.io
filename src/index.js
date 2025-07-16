@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const app = document.getElementById('app');
     
     app.innerHTML = `
-      <h1>CI/CD Practice App</h1>
+      <h1>CI/CD Practice App 1</h1>
       <p>This app is deployed using GitHub Actions!</p>
       <button id="health-check">Check API Health</button>
       <div id="result"></div>
