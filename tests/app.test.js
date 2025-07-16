@@ -1,7 +1,21 @@
 const request = require('supertest');
-const app = require('../server');
 
 describe('API Endpoints', () => {
+  let app;
+  let server;
+  
+  beforeAll(() => {
+    // Import app after setting up the test environment
+    app = require('../server');
+  });
+  
+  afterAll(async () => {
+    // Close any open handles
+    if (server) {
+      await new Promise(resolve => server.close(resolve));
+    }
+  });
+
   test('GET /api/health should return OK status', async () => {
     const response = await request(app)
       .get('/api/health')
