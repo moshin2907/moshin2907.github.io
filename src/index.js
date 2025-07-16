@@ -1,5 +1,6 @@
 // Simple frontend JavaScript
-document.addEventListener('DOMContentLoaded', function() {
+if (typeof document !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', function() {
     const app = document.getElementById('app');
     
     app.innerHTML = `
@@ -21,8 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-  
-  // Export for testing
-  if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { greeting: 'Hello from CI/CD!' };
-  }
+}
+
+// Export for testing
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { greeting: 'Hello from CI/CD!' };
+}
