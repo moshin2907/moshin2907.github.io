@@ -4,7 +4,7 @@ if (typeof document !== 'undefined') {
     const app = document.getElementById('app');
     
     app.innerHTML = `
-      <h1>CI/CD Practice App 1</h1>
+      <h1>CI/CD Practice App 2</h1>
       <p>This app is deployed using GitHub Actions!</p>
       <button id="health-check">Check API Health</button>
       <div id="result"></div>
